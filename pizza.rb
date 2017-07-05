@@ -2,7 +2,7 @@ print "Weclome to Good Pizza, Home of the Good Pizza."
 puts  "May I take Your Order?" 
 puts #just need space
 puts #just need space 
-puts "How Many Slices would you like?"
+puts "How Many Pizza's would you like?"
 slices = gets.chomp.to_i
 
 
@@ -34,31 +34,34 @@ def pveggies
 	veggies = ['lettuce', 'Eggplant', 'Onions', 'Olives'].sample
 end
 
-#def pextras
-	#y = gets.chomp
-    #if y == "yes"
-	#puts #dose nothing   
-	 #puts extras = ['Extra_meat', 'Extra_Pep','Extra_Veggies', 'Extra_Sauce'].sample
-	#else 
-		#puts #need space 
-		#puts "ok"
-	 #end
-#end
+def pextras
+	y = gets.chomp
+    if y == "yes"
+	puts #dose nothing   
+	 puts extras = ['Extra_meat', 'Extra_Pep','Extra_Veggies', 'Extra_Sauce'].sample
+	else 
+		puts #need space 
+		puts "ok then"
+	 end
+end
 		
 def total(num1, num2, num3)
 	p (num1 * num2 + num3)
 	#p num1 p 2 p num3
 end
 
-#def eprice(num4, num5)
-	#(num4 + num5)
-#end
 
-#puts "would you like Extras?"
-#pextras
+
+puts "would you like Extras?"
+pextras
+puts #need space
+puts #need space
+# puts "would you like delivery?"
+
 
 count = 1 
 size_cost = 0
+d_cost = 1.50 
 puts #just space 
 puts #just space
 
@@ -88,7 +91,7 @@ puts #just need a space
 puts #dose nothing just need a space
 count = count+1
 end
-p size_cost
+#p size_cost
 puts "your total price is:"
 
 total(slices, prices, size_cost)
